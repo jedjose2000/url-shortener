@@ -5,7 +5,8 @@ const app = express();
 mongoose = require('mongoose');
 let bodyParser = require('body-parser');
 const dns = require('node:dns');
-let uri = 'mongodb+srv://jedjose2000:hyPhvDwFltCj0Wkb@cluster0.cf7vwhh.mongodb.net/db_freeCodeCamp?retryWrites=true&w=majority'
+
+let uri = process.env.mongo_uri;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
